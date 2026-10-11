@@ -1,4 +1,5 @@
 #include "types.h"
+#include "memory.h"
 
 void copy(void* dst, const void* src, usize n) {
     u8 *d = (u8*)dst;
