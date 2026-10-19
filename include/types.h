@@ -14,3 +14,7 @@ typedef s64     ssize;
 #define true 1
 #define false 0
 #define NULL ((void*)0)
+
+#define USIZE_MAX ((usize)-1)
+#define SSIZE_MAX ((ssize)(USIZE_MAX >> 1))
+#define SSIZE_MIN ((ssize)(-SSIZE_MAX - 1))

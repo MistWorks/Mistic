@@ -1,5 +1,7 @@
 #pragma once
 #include "types.h"
+#include "align.h"
+#include "herr.h"
 
 usize log2floor(usize x);
 usize log2ceil(usize x);

@@ -1,9 +1,7 @@
-#include "types.h"
-#include "align.h"
 #include "math.h"
 
 usize log2floor(usize x) {
-    if (x == 0) return -1;
+    if (x == 0) hpanic(ERR_INVARIANT);
 
     usize k = 0;
     while (x > 1) {
@@ -14,7 +12,7 @@ usize log2floor(usize x) {
 }
 
 usize log2ceil(usize x) {
-    if (x == 0) return -1;
+    if (x == 0) hpanic(ERR_INVARIANT);
 
     usize k = log2floor(x);
     if (IS_POW2(x)) {
@@ -29,6 +27,7 @@ usize pow(usize base, usize exp) {
 
     usize newbase = base;
     while (exp > 1) {
+        if (base != 0 && newbase > USIZE_MAX / base) hpanic(ERR_OVERFLOW);
         newbase *= base;
         exp--;
     }
@@ -36,6 +35,7 @@ usize pow(usize base, usize exp) {
 }
 
 usize abs(ssize x) {
+    if (x == SSIZE_MIN) hpanic(ERR_OVERFLOW);
     if (x >= 0) {
         return (usize)x;
     } else {
@@ -74,12 +74,15 @@ usize gcd(usize a, usize b) {
 
 usize lcm(usize a, usize b) {
     if (a == 0 || b == 0) return 0;
-    return (a / gcd(a, b)) * b;
+    usize g = gcd(a, b);
+    usize x = a / g;
+    if (x > USIZE_MAX / b) hpanic(ERR_OVERFLOW);
+    return x * b;
 }
 
 usize nextpow2(usize x) {
     if (x == 0) return 1;
-    if (x > (1ULL << 63)) return -1;
+    if (x > (1ULL << 63)) hpanic(ERR_OVERFLOW);
 
     usize k = log2ceil(x);
     return 1ULL << k;
