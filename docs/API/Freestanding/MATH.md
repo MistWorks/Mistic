@@ -34,7 +34,7 @@ It gets by adding `>> 1` mask to the `x` and counting it while `x > 1`. For exam
 #### Errors
 So, `x >= 1` is the requirement. If `x == 1; k = 0` and $log2floor(1) == 0$
 
-**But** if `x == 0`, the answer is undefined and program can't continue working. In this case, Mistic calls to `hpanic` with `ERR_INVARIANT` error code. It's mean that you have to check `x != 0` elsewhere program will be stopped by force (if you don't [override hpanic](../CONVENTION.md))
+**But** if `x == 0`, the answer is undefined and program can't continue working. In this case, Mistic calls to `hpanic` with `ERR_INVARIANT` error code. It's mean that you have to check `x != 0` elsewhere program will be stopped by force (if you don't [override hpanic](../../CONVENTION.md))
 
 ---
 ### log2ceil(usize x)

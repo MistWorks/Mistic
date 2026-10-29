@@ -15,7 +15,7 @@ If you want to contribute or use it in your project, see:
 - [Mistic convention](CONVENTION.md)
 
 ## Status and limits
-- Unified error handling through [error handling system module](API/Freestanding/HERR.md) 
+- Unified error handling through [error handling system module](API/System/HERR.md) 
 - [Math module](API/Freestanding/MATH.md) suppurts only integer numbers
 - `herr` and `hpanic` are weak symbols, so you can **rewrite** them. See [error handling module](API/System/HERR.md) 
 ## Fast start

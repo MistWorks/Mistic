@@ -1,6 +1,6 @@
 # Contributing
 
-There is a [contributing guide](https://github.com/MistWorks/Docs/CONTRIBUTING.md) in [MistWorks/Docs](https://github.com/MistWorks/Docs). Basically follow these instructions
+There is a [contributing guide](https://github.com/MistWorks/Docs/blob/main/CONTRIBUTING.md) in [MistWorks/Docs](https://github.com/MistWorks/Docs). Basically follow these instructions
 
 But to contribute to Mistic, you also have to follow its specification
 
