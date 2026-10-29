@@ -38,9 +38,7 @@ It uses MIT license so you can do anything with this code!
 
 ### All new features and changes will be posted first to my [Telegram channel](https://t.me/DevyzLog)
 
-## All details are desctibed in docs
-
----
+## All details are desctibed in [docs](https://github.com/MistWorks/Mistic/tree/main/docs)
 
 ## Issues
 As other MistWorks projects, ***Mistic - young hobby project***
